@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Mert/Scenes/ControlsMenu.unity
     guid: e60d4e03f6ad81742b9b2b26b6f46d23
+  - enabled: 1
+    path: Assets/Scenes/ArenaScene.unity
+    guid: 146b0b33efc5e914a866ec898fce3413
+  - enabled: 1
+    path: Assets/Scenes/FighterScene.unity
+    guid: f34ca32d83aaf8244877c2b6dc792d5e
   m_configObjects: {}

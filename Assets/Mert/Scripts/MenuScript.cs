@@ -7,12 +7,21 @@ public class MenuScript : MonoBehaviour
 {
 
     [SerializeField] public sfxManager sfxRef;
-    [SerializeField] public AudioClip clickSound;
-    [SerializeField] public AudioClip backSound;
+    [SerializeField] private AudioClip clickSound;
+    [SerializeField] private AudioClip backSound;
 
     public void ButtonPlay(){
         sfxRef.playSFX(clickSound);
         SceneManager.LoadScene("GameSceneFinal");
+    }
+    public void ButtonFighter()
+    {
+        sfxRef.playSFX(clickSound);
+        SceneManager.LoadScene("FighterScene");
+    }    public void ButtonArena()
+    {
+        sfxRef.playSFX(clickSound);
+        SceneManager.LoadScene("ArenaScene");
     }
     public void ButtonMainMenu(){
         sfxRef.playSFX(backSound);
