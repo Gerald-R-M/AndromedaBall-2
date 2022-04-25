@@ -9,7 +9,7 @@ public class sfxManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        srcRef = this.GetComponent<AudioSource>();
+        srcRef = GetComponent<AudioSource>();
     }
     public void playSFX(AudioClip effect)
     {

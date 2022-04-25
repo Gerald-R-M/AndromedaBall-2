@@ -633,7 +633,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 520833949}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: ButtonPlay
+        m_MethodName: ButtonFighter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
