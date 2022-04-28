@@ -12,19 +12,34 @@ public class VoicelineManager : MonoBehaviour
     [SerializeField] private Voiceclip[] secondLines;
     [SerializeField] private Voiceclip finalLine;
     private finalClip _fullClip;
+    private bool _firstPlayed;
+    private bool _secondPlayed;
+    private bool _finalPlayed;
+    private AudioSource _sourceRef;
+    
+    [Tooltip("The amount of time (in seconds) that should pass between each line"),SerializeField] private float delay;
+
     // Start is called before the first frame update
     void Start()
     {
         _fullClip = new finalClip(ClipSelector(firstLines), ClipSelector(secondLines), finalLine);
-
+        _sourceRef = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!_sourceRef.isPlaying && !_firstPlayed)
+        {
+            playClip(finalClip.firstLine);
+        }
     }
 
+    void playClip(Voiceclip clip)
+    {
+        //TODO pass string to UI
+        _sourceRef.PlayOneShot(clip.voiceline, clip.VolumeScale);
+    }
     Voiceclip ClipSelector(Voiceclip[] clips)
     {
         Voiceclip selected;
@@ -35,9 +50,9 @@ public class VoicelineManager : MonoBehaviour
     [Serializable]
     private class Voiceclip
     {
-        [SerializeField] private AudioClip voiceline;
-        [SerializeField] private String subtitle;
-        [SerializeField] private float VolumeScale;
+        public AudioClip voiceline;
+        public String subtitle;
+        public float VolumeScale;
     }
 
     [Serializable]
