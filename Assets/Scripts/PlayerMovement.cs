@@ -96,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Dash()
     {
+        Debug.Log("Dash!!!!");
         float startTime = Time.time;
         Vector3 dir = new Vector3(xInput, 0, yInput).normalized;
 

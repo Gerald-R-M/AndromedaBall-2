@@ -17,7 +17,7 @@ public class SwingController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hitbox.enabled = false;
+        hitbox.gameObject.SetActive(false);
         anim = GetComponent<Animator>();
         input = GetComponent<InputProcessor>();
     }
@@ -25,19 +25,30 @@ public class SwingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (input.swing1)
+        if (this.tag == "Player 1")
         {
-            anim.SetTrigger("hit");
+            if (input.swing1)
+            {
+                anim.SetTrigger("hit");
+            }
+        }
+
+        if (this.tag == "PLayer 2")
+        {
+            if (input.swing2)
+            {
+                anim.SetTrigger("hit");
+            }
         }
     }
 
     void EnableHitbox()
     {
-        hitbox.enabled = true;
+        hitbox.gameObject.SetActive(true);
     }
 
     void DisableHitbox()
     {
-        hitbox.enabled = false;
+        hitbox.gameObject.SetActive(false);
     }
 }
