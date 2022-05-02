@@ -45564,10 +45564,10 @@ MonoBehaviour:
   firstLines: []
   secondLines: []
   finalLine:
-    voiceline: {fileID: 0}
-    subtitle: 
-    volumeScale: 0
-  delay: 0
+    voiceline: {fileID: 8300000, guid: f962f4403040c154ab8426acd78f34bb, type: 3}
+    subtitle: Fight!
+    volumeScale: 1
+  delay: 2
 --- !u!1 &1097311338078678943
 GameObject:
   m_ObjectHideFlags: 0
