@@ -73,8 +73,7 @@ public class VoicelineManager : MonoBehaviour
     private class Voiceclip
     {
         public AudioClip voiceline;
-        public String subtitle;
-        [FormerlySerializedAs("VolumeScale")]
+        public String subtitle; 
         public float volumeScale;
     }
 
