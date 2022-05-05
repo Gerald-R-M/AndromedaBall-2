@@ -14,9 +14,9 @@ public class VoicelineManager : MonoBehaviour
     [SerializeField] private Voiceclip[] secondLines;
     [SerializeField] private Voiceclip finalLine;
     private FinalClip _fullClip;
-    private bool _firstPlayed;
-    private bool _secondPlayed;
-    private bool _finalPlayed;
+    private bool _firstPlayed = false;
+    private bool _secondPlayed = false;
+    private bool _finalPlayed = false;
     private AudioSource _sourceRef;
     private float _timePassed;
     [Tooltip("The amount of time (in seconds) that should pass between each line"),SerializeField] private float delay;
@@ -27,6 +27,8 @@ public class VoicelineManager : MonoBehaviour
         //TODO prevent all gameplay while voicelines are being played
         _fullClip = new FinalClip(ClipSelector(firstLines), ClipSelector(secondLines), finalLine);
         _sourceRef = GetComponent<AudioSource>();
+        PlayClip(_fullClip.firstLine);
+        _firstPlayed = true;
     }
 
     // Update is called once per frame
@@ -34,12 +36,8 @@ public class VoicelineManager : MonoBehaviour
     {
         if (!_sourceRef.isPlaying && _timePassed >= delay)
         {
-            if(!_firstPlayed)
-            {
-                PlayClip(_fullClip.firstLine);
-                _firstPlayed = true;
-            }
-            else if (_firstPlayed && !_secondPlayed)
+            Debug.Log("First if passed");
+            if (_firstPlayed && !_secondPlayed)
             {
                 PlayClip(_fullClip.secondLine);
                 _secondPlayed = true;
@@ -48,17 +46,26 @@ public class VoicelineManager : MonoBehaviour
             {
                 PlayClip(_fullClip.finalLine);
                 _finalPlayed = true;
+                
             }
             _timePassed += Time.deltaTime;
         }
-        else
+        else if (_sourceRef.isPlaying)
         {
+            Debug.Log("_timePassed reset");
             _timePassed = 0;
+        }
+        _timePassed += Time.deltaTime;
+        Debug.Log("Time passed: " + _timePassed + ",  Next clip should play at: " + delay);
+        if (_firstPlayed && _secondPlayed && _finalPlayed && !_sourceRef.isPlaying)
+        {
+            subtitleRef.enabled = (false);
         }
     }
 
     private void PlayClip(Voiceclip clip)
     {
+        Debug.Log("Current clip that should play: " + clip.subtitle);
         subtitleRef.text = clip.subtitle;
         _sourceRef.PlayOneShot(clip.voiceline, clip.volumeScale);
     }

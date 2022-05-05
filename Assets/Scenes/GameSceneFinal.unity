@@ -45561,13 +45561,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subtitleRef: {fileID: 335822698}
-  firstLines: []
-  secondLines: []
+  firstLines:
+  - voiceline: {fileID: 8300000, guid: acd73da62340bb64ca1ec913d0e52aaa, type: 3}
+    subtitle: First Regret
+    volumeScale: 1
+  - voiceline: {fileID: 8300000, guid: b4cee5bc9273daf498dc5096f93929f4, type: 3}
+    subtitle: First Howdy
+    volumeScale: 1
+  secondLines:
+  - voiceline: {fileID: 8300000, guid: 1b918637daffc4a44b16c795b8598488, type: 3}
+    subtitle: Book of Souls
+    volumeScale: 1
+  - voiceline: {fileID: 8300000, guid: a937c8068b0ad1f43a1b34dbdf93d4d5, type: 3}
+    subtitle: Dick 'em down
+    volumeScale: 1
   finalLine:
     voiceline: {fileID: 8300000, guid: f962f4403040c154ab8426acd78f34bb, type: 3}
     subtitle: Fight!
     volumeScale: 1
-  delay: 2
+  delay: 0.25
 --- !u!1 &1097311338078678943
 GameObject:
   m_ObjectHideFlags: 0
