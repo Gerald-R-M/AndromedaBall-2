@@ -371,6 +371,8 @@ GameObject:
   - component: {fileID: 511129167}
   - component: {fileID: 511129169}
   - component: {fileID: 511129168}
+  - component: {fileID: 511129171}
+  - component: {fileID: 511129170}
   m_Layer: 5
   m_Name: Initial Arena
   m_TagString: Untagged
@@ -432,6 +434,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511129166}
   m_CullTransparentMesh: 1
+--- !u!114 &511129170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511129166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 511129171}
+          m_TargetAssemblyTypeName: ArenaSelect, Assembly-CSharp
+          m_MethodName: SetScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &511129171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511129166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8268af3144b5874f8c663853034726a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: GameSceneFinal
 --- !u!1 &841641339
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +614,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee1defcde366e64e8757233def3287d, type: 3}
+--- !u!1 &1266458845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5760877833535948246, guid: c6f41f13064282146a042082924db651, type: 3}
+  m_PrefabInstance: {fileID: 2009332632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1266458847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266458845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b2bba99048b9949a49cb7e1a7f6f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1357417505
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,8 +642,10 @@ GameObject:
   - component: {fileID: 1357417506}
   - component: {fileID: 1357417508}
   - component: {fileID: 1357417507}
+  - component: {fileID: 1357417509}
+  - component: {fileID: 1357417510}
   m_Layer: 5
-  m_Name: Initial Arena (1)
+  m_Name: Placeholder Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,6 +705,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357417505}
   m_CullTransparentMesh: 1
+--- !u!114 &1357417509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357417505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357417510}
+          m_TargetAssemblyTypeName: ArenaSelect, Assembly-CSharp
+          m_MethodName: SetScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1357417510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357417505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8268af3144b5874f8c663853034726a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: PlaceholderArena
 --- !u!1 &1460598871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1355,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5760877833535948247, guid: c6f41f13064282146a042082924db651, type: 3}
   m_PrefabInstance: {fileID: 2009332632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1266458845}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c0750da2daff8845a7f071d689f14cf, type: 3}
