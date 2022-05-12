@@ -45747,10 +45747,10 @@ MonoBehaviour:
     volumeScale: 1
   secondLines:
   - voiceline: {fileID: 8300000, guid: 1b918637daffc4a44b16c795b8598488, type: 3}
-    subtitle: Book of Souls
+    subtitle: The Book of Souls is Missing Your Name
     volumeScale: 1
-  - voiceline: {fileID: 8300000, guid: a937c8068b0ad1f43a1b34dbdf93d4d5, type: 3}
-    subtitle: Dick 'em down
+  - voiceline: {fileID: 8300000, guid: f47ff1dfb9759cb4990571a2aee88536, type: 3}
+    subtitle: It's Wednesday My Dudes!
     volumeScale: 1
   finalLine:
     voiceline: {fileID: 8300000, guid: f962f4403040c154ab8426acd78f34bb, type: 3}
