@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,20 @@ public class MenuScript : MonoBehaviour
     [SerializeField] public sfxManager sfxRef;
     [SerializeField] private AudioClip clickSound;
     [SerializeField] private AudioClip backSound;
+    private SelectionStorage storageRef;
+    private string arena;
+
+    private void Start()
+    {
+        storageRef = FindObjectOfType<SelectionStorage>();
+    }
 
     public void ButtonPlay(){
         sfxRef.playSFX(clickSound);
-        SceneManager.LoadScene("GameSceneFinal");
+        arena = storageRef.LoadArena();
+        storageRef.Destroy();
+        //TODO character select logic
+        SceneManager.LoadScene(arena);
     }
     public void ButtonFighter()
     {
