@@ -45745,12 +45745,24 @@ MonoBehaviour:
   - voiceline: {fileID: 8300000, guid: b4cee5bc9273daf498dc5096f93929f4, type: 3}
     subtitle: First Howdy
     volumeScale: 1
+  - voiceline: {fileID: 8300000, guid: fe3bb32c6211eb9429e2d1d0b127b886, type: 3}
+    subtitle: From Up Above and From Beneath
+    volumeScale: 1
+  - voiceline: {fileID: 8300000, guid: 60df2b069ef27bd4f99ec1fbaf1c2706, type: 3}
+    subtitle: Apple Bottom Jeans
+    volumeScale: 1
   secondLines:
   - voiceline: {fileID: 8300000, guid: 1b918637daffc4a44b16c795b8598488, type: 3}
     subtitle: The Book of Souls is Missing Your Name
     volumeScale: 1
   - voiceline: {fileID: 8300000, guid: f47ff1dfb9759cb4990571a2aee88536, type: 3}
     subtitle: It's Wednesday My Dudes!
+    volumeScale: 1
+  - voiceline: {fileID: 8300000, guid: 0b651903f53a837439c18e0908228e25, type: 3}
+    subtitle: Send the Invoice to God!
+    volumeScale: 1
+  - voiceline: {fileID: 8300000, guid: 9af5476de9b1ff74eb2107557e16e387, type: 3}
+    subtitle: Now Pay the Mechanic
     volumeScale: 1
   finalLine:
     voiceline: {fileID: 8300000, guid: f962f4403040c154ab8426acd78f34bb, type: 3}
