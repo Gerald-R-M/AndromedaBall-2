@@ -6,7 +6,7 @@ public class SwingController : MonoBehaviour
 {
     [SerializeField] private BoxCollider hitbox;
 
-    [SerializeField] private float force = 50f;
+    //[SerializeField] private float force = 50f;
 
     private float velRef;
 

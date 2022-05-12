@@ -10,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
     private Impact impactController;
 
     private float speed;
+    //0 = regular movement, 1 = slowed (for attacks)
+    private int movementState;
 
     public float baseSpeed = 5f;
     public float dashSpeed = 15f;
+    public float attackMoveSpeed = 1f;
     public float dashTime;
     public AudioClip dashSound;
 
@@ -31,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         playerInput = GetComponent<InputProcessor>();
         anim = GetComponent<Animator>();
         impactController = GetComponent<Impact>();
+        movementState = 0;
         speed = baseSpeed;
     }
 
@@ -66,6 +70,16 @@ public class PlayerMovement : MonoBehaviour
         //this if statement is for possible analog control dead zone
         if (dir.magnitude >= 0.05f)
         {
+            if (movementState == 0)
+            {
+                speed = baseSpeed;
+            }
+
+            if (movementState == 1)
+            {
+                speed = attackMoveSpeed;
+            }
+            
             controller.Move(dir.normalized * speed * Time.deltaTime);
                 Vector3 dirRotation =  dir.normalized;
             float targetAngle = Mathf.Atan2(dirRotation.x, dir.z) * Mathf.Rad2Deg;
@@ -92,6 +106,21 @@ public class PlayerMovement : MonoBehaviour
             Vector3 impactVectorFixed = new Vector3(impactVector.x * -1, 0, impactVector.z * -1);
             impactController.AddImpact(impactVectorFixed, impactVector.magnitude);
         }
+    }
+
+    public void ChangeMovementState(int index)
+    {
+        movementState = index;
+    }
+    
+    public void SlowDown()
+    {
+        movementState = 1;
+    }
+
+    public void SpeedBackUp()
+    {
+        movementState = 0;
     }
 
     IEnumerator Dash()
