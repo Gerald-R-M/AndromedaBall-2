@@ -7,8 +7,8 @@ using UnityEngine;
 public class OneWayWallsController : MonoBehaviour
 {
     
-    [SerializeField] private Collider Side1;
-    [SerializeField] private Collider Side2;
+    [SerializeField] private GameObject Side1;
+    [SerializeField] private GameObject Side2;
     private Collider _ballCollider;
     private Collider _wall;
 
@@ -21,6 +21,7 @@ public class OneWayWallsController : MonoBehaviour
     {
         Debug.Log("Are wall and ball collisions being ignored? : " +
                   Physics.GetIgnoreCollision(_wall, _ballCollider));
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -54,15 +55,18 @@ public class OneWayWallsController : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             Physics.IgnoreCollision(_wall,_ballCollider, false);
-            if (Side1.enabled)
+            if (Side1.activeInHierarchy)
             {
-                Side1.enabled = false;
-                Side2.enabled = true;
+                Debug.Log("First active if else passed. Side 1 should be active");
+
+                Side1.SetActive(false);
+                Side2.SetActive(true);
             }
-            else if (Side2.enabled)
+            else if (Side2.activeInHierarchy)
             {
-                Side1.enabled = true;
-                Side2.enabled = false;
+                Debug.Log("Second active if else passed. Side 2 should be active");
+                Side1.SetActive(true);
+                Side2.SetActive(false);
             }
         }
     }
