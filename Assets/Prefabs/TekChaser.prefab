@@ -326,8 +326,8 @@ GameObject:
   - component: {fileID: 2125080290498827980}
   - component: {fileID: 2591017303358623292}
   - component: {fileID: 499901861582561212}
-  - component: {fileID: 3292626368489447747}
   - component: {fileID: 8522688891036100638}
+  - component: {fileID: 766014413069386260}
   m_Layer: 0
   m_Name: TekChaser
   m_TagString: Untagged
@@ -448,25 +448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a3ed0e73a784a91aa105d4c60068ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3292626368489447747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2794641515081484826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb3c065db9ccf467391cf02f46f941f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseSpeed: 14.19
-  dashSpeed: 38.7
-  attackMoveSpeed: 3.5
-  dashTime: 0.15
-  dashSound: {fileID: 8300000, guid: c4232034e63fe04499bd48192d13a5e7, type: 3}
-  sfxRef: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: 9099ed1766b6d00448d74f8467773b48, type: 3}
 --- !u!114 &8522688891036100638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +463,25 @@ MonoBehaviour:
   minimumForce: 0.2
   resistance: 1.1
   falloffRate: 5
+--- !u!114 &766014413069386260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794641515081484826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2624f446436e649d48b8f507bba799e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseSpeed: 6
+  dashSpeed: 16.5
+  attackMoveSpeed: 1
+  dashTime: 3.87
+  dashSound: {fileID: 0}
+  sfxRef: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &2975440130969789047
 GameObject:
   m_ObjectHideFlags: 0
