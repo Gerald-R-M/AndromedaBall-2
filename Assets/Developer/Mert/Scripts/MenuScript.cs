@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField] private AudioClip clickSound;
     [SerializeField] private AudioClip backSound;
     private SelectionStorage storageRef;
+
     private string arena;
 
     private void Start()
@@ -18,11 +19,11 @@ public class MenuScript : MonoBehaviour
         storageRef = FindObjectOfType<SelectionStorage>();
     }
 
-    public void ButtonPlay(){
+    public void ButtonPlay()
+    {
+        Debug.Log("Beginning to play game");
         sfxRef.playSFX(clickSound);
         arena = storageRef.LoadArena();
-        storageRef.Destroy();
-        //TODO character select logic
         SceneManager.LoadScene(arena);
     }
     public void ButtonFighter()

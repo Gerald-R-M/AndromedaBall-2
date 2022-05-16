@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private float xInput, yInput;
     private bool dash, swing;
 
-    [SerializeField] private sfxManager sfxRef;
+    private sfxManager sfxRef;
     public AudioClip hitSound;
 
     // Start is called before the first frame update
@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         impactController = GetComponent<Impact>();
         movementState = 0;
         speed = baseSpeed;
+        sfxRef = FindObjectOfType<sfxManager>();
     }
 
     // Update is called once per frame

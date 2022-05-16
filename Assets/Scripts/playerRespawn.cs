@@ -8,23 +8,29 @@ public class playerRespawn : MonoBehaviour
 {
     private Vector3 respawnPos;
     private CharacterController cc;
-    [SerializeField] private Text player1Score;
-    [SerializeField] private Text player2Score;
-    [SerializeField] private GameTimer timerRef;
+    private Text player1Score;
+    private Text player2Score;
+    private GameTimer timerRef;
 
     [HideInInspector] public int oneScore = 0;
     [HideInInspector] public int twoScore = 0;
 
     [SerializeField] public AudioClip deathSound;
     [SerializeField] public AudioClip pointSound;
-    [SerializeField] public sfxManager sfxRef;
+    private sfxManager sfxRef;
 
 
-    public ballReset ballRef;
+    private ballReset ballRef;
     void Start()
     {
         respawnPos = transform.position;
         cc = GetComponent<CharacterController>();
+        player1Score = GameObject.Find("Player 1 Score").GetComponent<Text>();
+        player2Score = GameObject.Find("Player 2 Score").GetComponent<Text>();
+        timerRef = FindObjectOfType<GameTimer>();
+        sfxRef = FindObjectOfType<sfxManager>();
+        ballRef = FindObjectOfType<ballReset>();
+        
         Debug.Log("Player should respawn at: " + respawnPos);
     }
     private void Update()
