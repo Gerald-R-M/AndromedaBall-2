@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731689, g: 0.13414702, b: 0.1210784, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25197,6 +25197,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.000020656904
       objectReference: {fileID: 0}
+    - target: {fileID: 1579402406773187051, guid: 4f51c36cdb568473d9dda57d19a89706, type: 3}
+      propertyPath: sfxRef
+      value: 
+      objectReference: {fileID: 1628269420}
+    - target: {fileID: 1579402406773187051, guid: 4f51c36cdb568473d9dda57d19a89706, type: 3}
+      propertyPath: ballRef
+      value: 
+      objectReference: {fileID: 662958034}
+    - target: {fileID: 1579402406773187051, guid: 4f51c36cdb568473d9dda57d19a89706, type: 3}
+      propertyPath: player1Score
+      value: 
+      objectReference: {fileID: 1379207548}
+    - target: {fileID: 1579402406773187051, guid: 4f51c36cdb568473d9dda57d19a89706, type: 3}
+      propertyPath: player2Score
+      value: 
+      objectReference: {fileID: 130349021}
     - target: {fileID: 2132911648078774760, guid: 4f51c36cdb568473d9dda57d19a89706, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 58.02256
