@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class TekchaserMovement : MonoBehaviour
 {
 
     private CharacterController controller;
@@ -13,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
     //0 = regular movement, 1 = slowed (for attacks)
     private int movementState;
 
-    public float baseSpeed = 5f;
-    public float dashSpeed = 15f;
+    public float baseSpeed = 6f;
+    public float dashSpeed = 16.5f;
     public float attackMoveSpeed = 1f;
     public float dashTime;
     public AudioClip dashSound;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private float xInput, yInput;
     private bool dash, swing;
 
-    private sfxManager sfxRef;
+    [SerializeField] private sfxManager sfxRef;
     public AudioClip hitSound;
 
     // Start is called before the first frame update
@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
         impactController = GetComponent<Impact>();
         movementState = 0;
         speed = baseSpeed;
-        sfxRef = FindObjectOfType<sfxManager>();
     }
 
     // Update is called once per frame
