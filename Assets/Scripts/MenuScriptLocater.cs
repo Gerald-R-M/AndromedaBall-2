@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,21 @@ using UnityEngine;
 public class MenuScriptLocater : MonoBehaviour
 {   
     private MenuScript _menuRef;
+    private void Awake()
+    {
+        _menuRef = FindObjectOfType<MenuScript>();
+    }
     // Start is called before the first frame update
     private void Start()
     {
         _menuRef = FindObjectOfType<MenuScript>();
+    }
+    private void Update()
+    {
+        if (_menuRef == null)
+        {
+            _menuRef = FindObjectOfType<MenuScript>();
+        }
     }
 
     public void ButtonPlay()

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
 
-    [SerializeField] public sfxManager sfxRef;
+    private sfxManager _sfxRef;
     [SerializeField] private AudioClip clickSound;
     [SerializeField] private AudioClip backSound;
     private SelectionStorage storageRef;
@@ -25,39 +25,40 @@ public class MenuScript : MonoBehaviour
     }
     private void Start()
     {
+        _sfxRef = FindObjectOfType<sfxManager>();
         storageRef = FindObjectOfType<SelectionStorage>();
     }
 
     public void ButtonPlay()
     {
         Debug.Log("Beginning to play game");
-        sfxRef.PlaySfx(clickSound);
+        _sfxRef.PlaySfx(clickSound);
         arena = storageRef.LoadArena();
         SceneManager.LoadScene(arena);
     }
     public void ButtonFighter()
     {
-        sfxRef.PlaySfx(clickSound);
+        _sfxRef.PlaySfx(clickSound);
         SceneManager.LoadScene("FighterScene");
     }    public void ButtonArena()
     {
-        sfxRef.PlaySfx(clickSound);
+        _sfxRef.PlaySfx(clickSound);
         SceneManager.LoadScene("ArenaScene");
     }
     public void ButtonMainMenu(){
-        sfxRef.PlaySfx(backSound);
+        _sfxRef.PlaySfx(backSound);
         SceneManager.LoadScene("MainMenu");
     }
     public void ButtonControls(){
-        sfxRef.PlaySfx(clickSound);
+        _sfxRef.PlaySfx(clickSound);
         SceneManager.LoadScene("ControlsMenu");
     }
     public void ButtonCredits(){
-        sfxRef.PlaySfx(clickSound);
+        _sfxRef.PlaySfx(clickSound);
         SceneManager.LoadScene("CreditsMenu");
     }
     public void ButtonQuit(){
-        sfxRef.PlaySfx(clickSound);
+        _sfxRef.PlaySfx(clickSound);
         Application.Quit();
     }
 }

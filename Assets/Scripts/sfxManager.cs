@@ -21,18 +21,10 @@ public class sfxManager : MonoBehaviour
     }
     private void Start()
     {
-        srcRef = GetComponent<AudioSource>();
-    }
-    private void Update()
-    {
-        srcRef = GetComponent<AudioSource>();
+        srcRef = FindObjectOfType<AudioSource>();
     }
     public void PlaySfx(AudioClip effect)
     {
-        srcRef = GetComponent<AudioSource>();
-        Debug.Log(srcRef.name);
-        srcRef.clip = effect;
         srcRef.PlayOneShot(effect, 1.0f);
-
     }
 }
