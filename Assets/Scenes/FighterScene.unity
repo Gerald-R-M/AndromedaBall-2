@@ -205,8 +205,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2009332633}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 789290273}
+        m_TargetAssemblyTypeName: MenuScriptLocater, Assembly-CSharp
         m_MethodName: ButtonMainMenu
         m_Mode: 1
         m_Arguments:
@@ -718,6 +718,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761385563}
   m_CullTransparentMesh: 1
+--- !u!1 &789290272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789290274}
+  - component: {fileID: 789290273}
+  m_Layer: 0
+  m_Name: MenuFinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &789290273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789290272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf00f2f0ad06f24fac05557a83ad73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &789290274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789290272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &906783667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,8 +1473,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2009332633}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 789290273}
+        m_TargetAssemblyTypeName: MenuScriptLocater, Assembly-CSharp
         m_MethodName: ButtonArena
         m_Mode: 1
         m_Arguments:
@@ -1717,17 +1760,6 @@ PrefabInstance:
       objectReference: {fileID: 1512082396}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f41f13064282146a042082924db651, type: 3}
---- !u!114 &2009332633 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5760877833535948247, guid: c6f41f13064282146a042082924db651, type: 3}
-  m_PrefabInstance: {fileID: 2009332632}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2009332634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0750da2daff8845a7f071d689f14cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2009332634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5760877833535948246, guid: c6f41f13064282146a042082924db651, type: 3}
