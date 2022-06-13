@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 669748321}
   - component: {fileID: 669748320}
   - component: {fileID: 669748319}
+  - component: {fileID: 669748323}
   - component: {fileID: 669748322}
   m_Layer: 5
   m_Name: CreditsButton
@@ -276,7 +277,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 669748317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3cf68363a884c4386ac75723e49d75, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f7186c54591a6b48b6bf2b097b58c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &669748323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669748317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
@@ -284,15 +297,31 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 669748318}
-          m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_MethodName: set_parent
-          m_Mode: 2
+        - m_Target: {fileID: 669748322}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
           m_Arguments:
-            m_ObjectArgument: {fileID: 669748318}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 100
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669748322}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: -100
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -696,6 +725,7 @@ GameObject:
   - component: {fileID: 1179186748}
   - component: {fileID: 1179186747}
   - component: {fileID: 1179186746}
+  - component: {fileID: 1179186750}
   - component: {fileID: 1179186749}
   m_Layer: 5
   m_Name: ControlsButton
@@ -826,7 +856,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1179186744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3cf68363a884c4386ac75723e49d75, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
@@ -834,18 +864,46 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1179186745}
-          m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_MethodName: set_parent
-          m_Mode: 2
+        - m_Target: {fileID: 1179186750}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
           m_Arguments:
-            m_ObjectArgument: {fileID: 1179186745}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 100
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1179186750}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: -100
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1179186750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179186744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7186c54591a6b48b6bf2b097b58c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1184293670
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +917,7 @@ GameObject:
   - component: {fileID: 1184293673}
   - component: {fileID: 1184293672}
   - component: {fileID: 1184293675}
+  - component: {fileID: 1184293676}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -988,7 +1047,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1184293670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3cf68363a884c4386ac75723e49d75, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f7186c54591a6b48b6bf2b097b58c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1184293676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184293670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
@@ -996,15 +1067,31 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1184293671}
-          m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_MethodName: set_parent
-          m_Mode: 2
+        - m_Target: {fileID: 1184293675}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
           m_Arguments:
-            m_ObjectArgument: {fileID: 1184293671}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 100
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1184293675}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: -100
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -1188,6 +1275,7 @@ GameObject:
   - component: {fileID: 1352900223}
   - component: {fileID: 1352900222}
   - component: {fileID: 1352900221}
+  - component: {fileID: 1352900225}
   - component: {fileID: 1352900224}
   m_Layer: 5
   m_Name: QuitButton
@@ -1318,7 +1406,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1352900219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3cf68363a884c4386ac75723e49d75, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f7186c54591a6b48b6bf2b097b58c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1352900225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352900219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
@@ -1326,15 +1426,31 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1352900220}
-          m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_MethodName: set_parent
-          m_Mode: 2
+        - m_Target: {fileID: 1352900224}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
           m_Arguments:
-            m_ObjectArgument: {fileID: 1352900220}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 100
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1352900224}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: -100
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
