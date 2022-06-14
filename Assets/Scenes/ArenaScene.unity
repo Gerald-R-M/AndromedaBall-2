@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 75306518}
   - component: {fileID: 75306517}
   - component: {fileID: 75306516}
-  - component: {fileID: 75306520}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -230,20 +229,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &75306520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75306515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0750da2daff8845a7f071d689f14cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 66984790ac64eca40a4f66c17f81e340, type: 3}
-  backSound: {fileID: 8300000, guid: af20ba8633f0677438fb2eea429d0a68, type: 3}
 --- !u!1 &277488761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,9 +1060,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2009332633}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: ButtonPlay
+      - m_Target: {fileID: 1390280906}
+        m_TargetAssemblyTypeName: MenuScriptLocater, Assembly-CSharp
+        m_MethodName: ButtonArena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1518,8 +1503,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2009332633}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 1390280906}
+        m_TargetAssemblyTypeName: MenuScriptLocater, Assembly-CSharp
         m_MethodName: ButtonFighter
         m_Mode: 1
         m_Arguments:
@@ -1629,17 +1614,6 @@ PrefabInstance:
       objectReference: {fileID: 2086593555}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f41f13064282146a042082924db651, type: 3}
---- !u!114 &2009332633 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5760877833535948247, guid: c6f41f13064282146a042082924db651, type: 3}
-  m_PrefabInstance: {fileID: 2009332632}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266458845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0750da2daff8845a7f071d689f14cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2086593555 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 958651439561851052, guid: 1ee1defcde366e64e8757233def3287d, type: 3}
