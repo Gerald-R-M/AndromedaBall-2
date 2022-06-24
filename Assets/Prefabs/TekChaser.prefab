@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 766014413069386260}
   m_Layer: 0
   m_Name: TekChaser
-  m_TagString: Untagged
+  m_TagString: Player 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,15 +414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7d8e822444d4448a5df66be1f27484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Score: {fileID: 0}
-  player2Score: {fileID: 0}
-  timerRef: {fileID: 0}
   oneScore: 0
   twoScore: 0
   deathSound: {fileID: 8300000, guid: 2d8ec86176287464b97aaf52182bc8f3, type: 3}
   pointSound: {fileID: 8300000, guid: 57ee14e049b53c2469a17e4624031771, type: 3}
-  sfxRef: {fileID: 958651439561851052, guid: 1ee1defcde366e64e8757233def3287d, type: 3}
-  ballRef: {fileID: 0}
 --- !u!114 &2591017303358623292
 MonoBehaviour:
   m_ObjectHideFlags: 0

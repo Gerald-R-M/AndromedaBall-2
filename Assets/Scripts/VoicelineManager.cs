@@ -36,7 +36,6 @@ public class VoicelineManager : MonoBehaviour
     {
         if (!_sourceRef.isPlaying && _timePassed >= delay)
         {
-            Debug.Log("First if passed");
             if (_firstPlayed && !_secondPlayed)
             {
                 PlayClip(_fullClip.secondLine);
@@ -52,11 +51,9 @@ public class VoicelineManager : MonoBehaviour
         }
         else if (_sourceRef.isPlaying)
         {
-            Debug.Log("_timePassed reset");
             _timePassed = 0;
         }
         _timePassed += Time.deltaTime;
-        Debug.Log("Time passed: " + _timePassed + ",  Next clip should play at: " + delay);
         if (_firstPlayed && _secondPlayed && _finalPlayed && !_sourceRef.isPlaying)
         {
             subtitleRef.enabled = (false);
