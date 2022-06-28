@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public float xInput, yInput;
     //[HideInInspector]
-    public bool dash, swing;
+    public bool ability1, ability2, swing;
 
     [SerializeField]
     private int playerIndex;
@@ -42,21 +42,21 @@ public class Player : MonoBehaviour
         {
             xInput = playerInput.input.x;
             yInput = playerInput.input.y;
-            dash = playerInput.dash;
-            swing = playerInput.swing1;
+            ability1 = playerInput.p1_ability1;
+            swing = playerInput.p1_swing;
         }
 
         else if (playerIndex == 2)
         {
             xInput = playerInput.input2.x;
             yInput = playerInput.input2.y;
-            dash = playerInput.dash2;
-            swing = playerInput.swing2;
+            ability1 = playerInput.p2_ability1;
+            swing = playerInput.p2_swing;
         }
         
         dir = new Vector3(xInput, 0, yInput).normalized;
 
-        if (dash)
+        if (ability1)
         {
             StartCoroutine(dashAbility.Dash(dir));
         }

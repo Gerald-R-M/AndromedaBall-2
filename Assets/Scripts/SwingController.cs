@@ -27,7 +27,7 @@ public class SwingController : MonoBehaviour
     {
         if (this.tag == "Player 1")
         {
-            if (input.swing1)
+            if (input.p1_swing)
             {
                 anim.SetTrigger("hit");
             }
@@ -35,7 +35,7 @@ public class SwingController : MonoBehaviour
 
         if (this.tag == "PLayer 2")
         {
-            if (input.swing2)
+            if (input.p2_swing)
             {
                 anim.SetTrigger("hit");
             }

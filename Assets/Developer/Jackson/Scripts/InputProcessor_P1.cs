@@ -33,7 +33,7 @@ public class InputProcessor_P1 : MonoBehaviour
     {
         get
         {
-            return controls.PlayerControls.Movement.ReadValue<Vector2>();
+            return controls.PlayerControls.P1_Movement.ReadValue<Vector2>();
         }
     }
     
@@ -41,7 +41,7 @@ public class InputProcessor_P1 : MonoBehaviour
     {
         get
         {
-            return controls.PlayerControls.Dodge.triggered;
+            return controls.PlayerControls.P1_Ability1.triggered;
         }
     }
     
@@ -49,7 +49,7 @@ public class InputProcessor_P1 : MonoBehaviour
     {
         get
         {
-            return controls.PlayerControls.Swing1.triggered;
+            return controls.PlayerControls.P1_Swing.triggered;
         }
     }
 }

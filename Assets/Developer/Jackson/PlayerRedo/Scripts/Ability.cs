@@ -4,20 +4,28 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-//[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Ability", order = 1)]
-public class Ability : MonoBehaviour
+namespace Developer.Jackson.PlayerRedo.Scripts
 {
-    public string name;
-    public Sprite icon;
-
-    private CharacterController characterController;
-    private PlayerBase playerBase;
-    private InputProcessor inputProcessor;
-
-    void Start()
+    public class Ability : MonoBehaviour
     {
-        characterController = this.GetComponent<CharacterController>();
-        playerBase = this.GetComponent<PlayerBase>();
-        inputProcessor = this.GetComponent<InputProcessor>();
+        public String name;
+        public Sprite icon;
+        protected CharacterController characterController;
+        protected PlayerBase playerBase;
+        protected InputProcessor inputProcessor;
+        protected Movement movement;
+
+        void Start()
+        {
+            characterController = this.GetComponent<CharacterController>();
+            playerBase = this.GetComponent<PlayerBase>();
+            inputProcessor = this.GetComponent<InputProcessor>();
+            movement = this.GetComponent<Movement>();
+        }
+
+        public virtual void Activate()
+        {
+
+        }
     }
 }

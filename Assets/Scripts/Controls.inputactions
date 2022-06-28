@@ -6,7 +6,7 @@
             "id": "713eea7e-9fcb-4fb7-884e-a4bf31083c38",
             "actions": [
                 {
-                    "name": "Movement",
+                    "name": "P1_Movement",
                     "type": "PassThrough",
                     "id": "78ad987d-bcae-4569-b256-5c0d0731dc29",
                     "expectedControlType": "Vector2",
@@ -15,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Dodge",
+                    "name": "P1_Ability1",
                     "type": "Button",
                     "id": "e0c9f44e-492a-405d-baf3-2c597f6196fc",
                     "expectedControlType": "Button",
@@ -24,7 +24,16 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Swing1",
+                    "name": "P1_Ability2",
+                    "type": "Button",
+                    "id": "14f98973-3ab5-49d6-91b9-2ba34ce9d06e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "P1_Swing",
                     "type": "Button",
                     "id": "8089b634-4f82-4665-b77f-89c1b4089f46",
                     "expectedControlType": "Button",
@@ -33,16 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Swing2",
-                    "type": "Button",
-                    "id": "1f1d1283-d702-4cf4-b573-5f4c6af05b48",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Movement2",
+                    "name": "P2_Movement",
                     "type": "PassThrough",
                     "id": "00b6c4cb-2150-4277-8717-6e1df1e25524",
                     "expectedControlType": "Vector2",
@@ -51,9 +51,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Dodge2",
+                    "name": "P2_Ability1",
                     "type": "Button",
                     "id": "77d3fbfb-8ec8-408c-a461-b8a37a2e0a5c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "P2_Ability2",
+                    "type": "Button",
+                    "id": "9bc665a7-dc8c-47a6-9b77-3bd3338d7be7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "P2_Swing",
+                    "type": "Button",
+                    "id": "1f1d1283-d702-4cf4-b573-5f4c6af05b48",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -68,7 +86,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "P1_Movement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -79,7 +97,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Movement",
+                    "action": "P1_Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -90,7 +108,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Movement",
+                    "action": "P1_Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -101,7 +119,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Movement",
+                    "action": "P1_Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -112,7 +130,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Movement",
+                    "action": "P1_Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -123,7 +141,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Dodge",
+                    "action": "P1_Ability1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -134,7 +152,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Swing1",
+                    "action": "P1_Swing",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -145,7 +163,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Swing2",
+                    "action": "P2_Swing",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -156,7 +174,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement2",
+                    "action": "P2_Movement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -167,7 +185,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Movement2",
+                    "action": "P2_Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -178,7 +196,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Movement2",
+                    "action": "P2_Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -189,7 +207,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Movement2",
+                    "action": "P2_Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -200,7 +218,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Movement2",
+                    "action": "P2_Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -211,7 +229,29 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Dodge2",
+                    "action": "P2_Ability1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9988034c-888a-465c-9593-13d46a787640",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P1_Ability2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96e4e40a-3f7a-4f08-9ed8-70f171f4a11e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P2_Ability2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

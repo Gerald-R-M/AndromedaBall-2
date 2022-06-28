@@ -45,16 +45,16 @@ public class TekchaserMovement : MonoBehaviour
         {
             xInput = playerInput.input.x;
             yInput = playerInput.input.y;
-            dash = playerInput.dash;
-            swing = playerInput.swing1;
+            dash = playerInput.p1_ability1;
+            swing = playerInput.p1_swing;
         }
 
         else if (this.tag == "Player 2")
         {
             xInput = playerInput.input2.x;
             yInput = playerInput.input2.y;
-            dash = playerInput.dash2;
-            swing = playerInput.swing2;
+            dash = playerInput.p2_ability1;
+            swing = playerInput.p2_swing;
         }
         //convert WASD input into a direction vector
         
