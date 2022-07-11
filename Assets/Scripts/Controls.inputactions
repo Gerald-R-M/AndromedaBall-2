@@ -236,10 +236,10 @@
                 {
                     "name": "",
                     "id": "9988034c-888a-465c-9593-13d46a787640",
-                    "path": "",
+                    "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "P1_Ability2",
                     "isComposite": false,
                     "isPartOfComposite": false

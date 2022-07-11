@@ -30,6 +30,14 @@ public class BasicSwing : MonoBehaviour
             }
         }
 
+        if (this.tag == "Player 2")
+        {
+            if (input.p2_swing)
+            {
+                anim.SetTrigger("hit");
+            }
+        }
+
     }
     
     void EnableHitbox()

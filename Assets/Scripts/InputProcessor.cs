@@ -57,12 +57,28 @@ public class InputProcessor : MonoBehaviour
             return controls.PlayerControls.P1_Ability1.triggered;
         }
     }
+    
+    public bool p1_ability2
+    {
+        get
+        {
+            return controls.PlayerControls.P1_Ability2.triggered;
+        }
+    }
 
     public bool p2_ability1
     {
         get
         {
             return controls.PlayerControls.P2_Ability1.triggered;
+        }
+    }
+    
+    public bool p2_ability2
+    {
+        get
+        {
+            return controls.PlayerControls.P2_Ability2.triggered;
         }
     }
 

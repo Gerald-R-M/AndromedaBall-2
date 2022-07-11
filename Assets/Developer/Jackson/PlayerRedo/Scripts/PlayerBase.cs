@@ -49,6 +49,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
                 xInput = playerInput.input.x;
                 yInput = playerInput.input.y;
                 abil1 = playerInput.p1_ability1;
+                abil2 = playerInput.p1_ability2;
                 swing = playerInput.p1_swing;
             }
 
@@ -57,6 +58,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
                 xInput = playerInput.input2.x;
                 yInput = playerInput.input2.y;
                 abil1 = playerInput.p2_ability1;
+                abil2 = playerInput.p2_ability2;
                 swing = playerInput.p2_swing;
             }
 
@@ -64,6 +66,13 @@ namespace Developer.Jackson.PlayerRedo.Scripts
             {
                 ability1.Activate();
             }
+            
+            if (abil2)
+            {
+                Debug.Log("Ability 2 Acitvated");
+                ability2.Activate();
+            }
+
             
             dir = new Vector3(xInput, 0, yInput).normalized;
 
