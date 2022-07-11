@@ -44,12 +44,12 @@ public class GameTimer : MonoBehaviour
         }
         else
         {
-            if(playerInput.swing1 ||playerInput.swing2)
+            if(playerInput.p1_swing ||playerInput.p2_swing)
             {
                 Debug.Log("Loading main menu...");
                 SceneManager.LoadScene("MainMenu");
             }
-            else if(playerInput.dash)
+            else if(playerInput.p1_ability1)
             {
                 Debug.Log("Quitting game....");
 

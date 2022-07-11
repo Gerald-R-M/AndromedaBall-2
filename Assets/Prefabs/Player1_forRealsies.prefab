@@ -141,6 +141,8 @@ GameObject:
   - component: {fileID: 5219601964096442017}
   - component: {fileID: 2458475302450033276}
   - component: {fileID: 4167858049148285273}
+  - component: {fileID: 6335420760984330209}
+  - component: {fileID: 6085770737378331451}
   m_Layer: 0
   m_Name: Player1_forRealsies
   m_TagString: Player 2
@@ -237,11 +239,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 5
-  dashSpeed: 20
   attackMoveSpeed: 3.5
-  dashTime: 0.15
   dashSound: {fileID: 8300000, guid: c4232034e63fe04499bd48192d13a5e7, type: 3}
   hitSound: {fileID: 8300000, guid: 9099ed1766b6d00448d74f8467773b48, type: 3}
+  dir: {x: 0, y: 0, z: 0}
 --- !u!114 &5219601964096442017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +290,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 8969354808149558981}
+--- !u!114 &6335420760984330209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458475302450033273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2c1bb9c25e44437aa5010b15b24109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xInput: 0
+  yInput: 0
+  dash: 0
+  swing: 0
+  playerIndex: 1
+  dir: {x: 0, y: 0, z: 0}
+--- !u!114 &6085770737378331451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458475302450033273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0427c087b1d7f4357bd9dfe24996cfbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 25
+  dashTime: 0.11
 --- !u!1 &2565497609535120625
 GameObject:
   m_ObjectHideFlags: 0
