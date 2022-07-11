@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,16 +6,25 @@ using UnityEngine;
 
 public class sfxManager : MonoBehaviour
 {
-    [SerializeField] [HideInInspector] public AudioSource srcRef;
+    [SerializeField] private AudioSource srcRef;
+    private static sfxManager _Instance;
+
     // Start is called before the first frame update
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        if (_Instance != null && _Instance != this)
+            Destroy(gameObject);
+        else
+            _Instance = this;
+
+    }
     private void Start()
     {
-        srcRef = GetComponent<AudioSource>();
+        srcRef = FindObjectOfType<AudioSource>();
     }
-    public void playSFX(AudioClip effect)
+    public void PlaySfx(AudioClip effect)
     {
-        srcRef.clip = effect;
         srcRef.PlayOneShot(effect, 1.0f);
-
     }
 }

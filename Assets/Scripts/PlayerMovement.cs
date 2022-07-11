@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
         //Move();
     }
 
-
     public void ChangeMovementState(int index)
     {
         movementState = index;

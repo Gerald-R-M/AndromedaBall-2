@@ -48,7 +48,7 @@ public class playerRespawn : MonoBehaviour
             cc.enabled = false;
             transform.position = new Vector3 (respawnPos.x, respawnPos.y, respawnPos.z);
             cc.enabled = true;
-            sfxRef.playSFX(deathSound);
+            sfxRef.PlaySfx(deathSound);
             ballRef.resetPos();
             if (gameObject.CompareTag("Player 1"))
             {
