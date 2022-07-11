@@ -198,6 +198,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409933013}
   m_CullTransparentMesh: 1
+--- !u!1 &511435550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511435552}
+  - component: {fileID: 511435551}
+  m_Layer: 0
+  m_Name: MenuFinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &511435551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511435550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf00f2f0ad06f24fac05557a83ad73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &511435552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511435550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &634082520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -526,6 +569,7 @@ GameObject:
   - component: {fileID: 1147215087}
   - component: {fileID: 1147215086}
   - component: {fileID: 1147215085}
+  - component: {fileID: 1147215088}
   - component: {fileID: 1147215084}
   m_Layer: 5
   m_Name: BackButton
@@ -562,7 +606,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1147215082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3cf68363a884c4386ac75723e49d75, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
@@ -570,15 +614,31 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1147215083}
-          m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_MethodName: set_parent
-          m_Mode: 2
+        - m_Target: {fileID: 1147215088}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
           m_Arguments:
-            m_ObjectArgument: {fileID: 1147215083}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 100
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1147215088}
+          m_TargetAssemblyTypeName: ButtonMovement, Assembly-CSharp
+          m_MethodName: MovementOfButton
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: -100
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -626,8 +686,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2034036934}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 511435551}
+        m_TargetAssemblyTypeName: MenuScriptLocater, Assembly-CSharp
         m_MethodName: ButtonMainMenu
         m_Mode: 1
         m_Arguments:
@@ -676,6 +736,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147215082}
   m_CullTransparentMesh: 1
+--- !u!114 &1147215088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147215082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7186c54591a6b48b6bf2b097b58c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1304906209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1104,17 +1176,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861497696}
   m_CullTransparentMesh: 1
---- !u!114 &2034036934 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5760877833535948247, guid: c6f41f13064282146a042082924db651, type: 3}
-  m_PrefabInstance: {fileID: 634082520}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0750da2daff8845a7f071d689f14cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2044137933
 GameObject:
   m_ObjectHideFlags: 0

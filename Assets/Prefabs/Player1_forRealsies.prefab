@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 4167858049148285273}
   m_Layer: 0
   m_Name: Player1_forRealsies
-  m_TagString: Player 1
+  m_TagString: Player 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,15 +177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7d8e822444d4448a5df66be1f27484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Score: {fileID: 0}
-  player2Score: {fileID: 0}
-  timerRef: {fileID: 0}
   oneScore: 0
   twoScore: 0
   deathSound: {fileID: 8300000, guid: 2d8ec86176287464b97aaf52182bc8f3, type: 3}
   pointSound: {fileID: 8300000, guid: 57ee14e049b53c2469a17e4624031771, type: 3}
-  sfxRef: {fileID: 958651439561851052, guid: 1ee1defcde366e64e8757233def3287d, type: 3}
-  ballRef: {fileID: 0}
 --- !u!65 &5172264021025225364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -246,7 +241,6 @@ MonoBehaviour:
   attackMoveSpeed: 3.5
   dashTime: 0.15
   dashSound: {fileID: 8300000, guid: c4232034e63fe04499bd48192d13a5e7, type: 3}
-  sfxRef: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 9099ed1766b6d00448d74f8467773b48, type: 3}
 --- !u!114 &5219601964096442017
 MonoBehaviour:

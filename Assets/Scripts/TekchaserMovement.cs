@@ -63,7 +63,7 @@ public class TekchaserMovement : MonoBehaviour
         if (dash)
         {
             Debug.Log("Dash!");
-            sfxRef.playSFX(dashSound);
+            sfxRef.PlaySfx(dashSound);
             StartCoroutine(Dash());
         }
         
@@ -101,7 +101,7 @@ public class TekchaserMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball")
         {
-            sfxRef.playSFX(hitSound);
+            sfxRef.PlaySfx(hitSound);
             Vector3 impactVector = collision.gameObject.GetComponent<Rigidbody>().velocity;
             Vector3 impactVectorFixed = new Vector3(impactVector.x * -1, 0, impactVector.z * -1);
             impactController.AddImpact(impactVectorFixed, impactVector.magnitude);
