@@ -28,7 +28,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
             ""id"": ""713eea7e-9fcb-4fb7-884e-a4bf31083c38"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""P1_Movement"",
                     ""type"": ""PassThrough"",
                     ""id"": ""78ad987d-bcae-4569-b256-5c0d0731dc29"",
                     ""expectedControlType"": ""Vector2"",
@@ -37,7 +37,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Dodge"",
+                    ""name"": ""P1_Ability1"",
                     ""type"": ""Button"",
                     ""id"": ""e0c9f44e-492a-405d-baf3-2c597f6196fc"",
                     ""expectedControlType"": ""Button"",
@@ -46,7 +46,16 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Swing1"",
+                    ""name"": ""P1_Ability2"",
+                    ""type"": ""Button"",
+                    ""id"": ""14f98973-3ab5-49d6-91b9-2ba34ce9d06e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""P1_Swing"",
                     ""type"": ""Button"",
                     ""id"": ""8089b634-4f82-4665-b77f-89c1b4089f46"",
                     ""expectedControlType"": ""Button"",
@@ -55,16 +64,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Swing2"",
-                    ""type"": ""Button"",
-                    ""id"": ""1f1d1283-d702-4cf4-b573-5f4c6af05b48"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Movement2"",
+                    ""name"": ""P2_Movement"",
                     ""type"": ""PassThrough"",
                     ""id"": ""00b6c4cb-2150-4277-8717-6e1df1e25524"",
                     ""expectedControlType"": ""Vector2"",
@@ -73,9 +73,27 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Dodge2"",
+                    ""name"": ""P2_Ability1"",
                     ""type"": ""Button"",
                     ""id"": ""77d3fbfb-8ec8-408c-a461-b8a37a2e0a5c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""P2_Ability2"",
+                    ""type"": ""Button"",
+                    ""id"": ""9bc665a7-dc8c-47a6-9b77-3bd3338d7be7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""P2_Swing"",
+                    ""type"": ""Button"",
+                    ""id"": ""1f1d1283-d702-4cf4-b573-5f4c6af05b48"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -90,7 +108,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""P1_Movement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -101,7 +119,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""P1_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -112,7 +130,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""P1_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -123,7 +141,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""P1_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -134,7 +152,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""P1_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -145,7 +163,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Dodge"",
+                    ""action"": ""P1_Ability1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -156,7 +174,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Swing1"",
+                    ""action"": ""P1_Swing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -167,7 +185,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Swing2"",
+                    ""action"": ""P2_Swing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -178,7 +196,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement2"",
+                    ""action"": ""P2_Movement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -189,7 +207,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Movement2"",
+                    ""action"": ""P2_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -200,7 +218,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Movement2"",
+                    ""action"": ""P2_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -211,7 +229,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Movement2"",
+                    ""action"": ""P2_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -222,7 +240,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Movement2"",
+                    ""action"": ""P2_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -233,7 +251,29 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Dodge2"",
+                    ""action"": ""P2_Ability1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9988034c-888a-465c-9593-13d46a787640"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""P1_Ability2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""96e4e40a-3f7a-4f08-9ed8-70f171f4a11e"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""P2_Ability2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -256,12 +296,14 @@ public partial class @Controls : IInputActionCollection2, IDisposable
 }");
         // PlayerControls
         m_PlayerControls = asset.FindActionMap("PlayerControls", throwIfNotFound: true);
-        m_PlayerControls_Movement = m_PlayerControls.FindAction("Movement", throwIfNotFound: true);
-        m_PlayerControls_Dodge = m_PlayerControls.FindAction("Dodge", throwIfNotFound: true);
-        m_PlayerControls_Swing1 = m_PlayerControls.FindAction("Swing1", throwIfNotFound: true);
-        m_PlayerControls_Swing2 = m_PlayerControls.FindAction("Swing2", throwIfNotFound: true);
-        m_PlayerControls_Movement2 = m_PlayerControls.FindAction("Movement2", throwIfNotFound: true);
-        m_PlayerControls_Dodge2 = m_PlayerControls.FindAction("Dodge2", throwIfNotFound: true);
+        m_PlayerControls_P1_Movement = m_PlayerControls.FindAction("P1_Movement", throwIfNotFound: true);
+        m_PlayerControls_P1_Ability1 = m_PlayerControls.FindAction("P1_Ability1", throwIfNotFound: true);
+        m_PlayerControls_P1_Ability2 = m_PlayerControls.FindAction("P1_Ability2", throwIfNotFound: true);
+        m_PlayerControls_P1_Swing = m_PlayerControls.FindAction("P1_Swing", throwIfNotFound: true);
+        m_PlayerControls_P2_Movement = m_PlayerControls.FindAction("P2_Movement", throwIfNotFound: true);
+        m_PlayerControls_P2_Ability1 = m_PlayerControls.FindAction("P2_Ability1", throwIfNotFound: true);
+        m_PlayerControls_P2_Ability2 = m_PlayerControls.FindAction("P2_Ability2", throwIfNotFound: true);
+        m_PlayerControls_P2_Swing = m_PlayerControls.FindAction("P2_Swing", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -321,22 +363,26 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     // PlayerControls
     private readonly InputActionMap m_PlayerControls;
     private IPlayerControlsActions m_PlayerControlsActionsCallbackInterface;
-    private readonly InputAction m_PlayerControls_Movement;
-    private readonly InputAction m_PlayerControls_Dodge;
-    private readonly InputAction m_PlayerControls_Swing1;
-    private readonly InputAction m_PlayerControls_Swing2;
-    private readonly InputAction m_PlayerControls_Movement2;
-    private readonly InputAction m_PlayerControls_Dodge2;
+    private readonly InputAction m_PlayerControls_P1_Movement;
+    private readonly InputAction m_PlayerControls_P1_Ability1;
+    private readonly InputAction m_PlayerControls_P1_Ability2;
+    private readonly InputAction m_PlayerControls_P1_Swing;
+    private readonly InputAction m_PlayerControls_P2_Movement;
+    private readonly InputAction m_PlayerControls_P2_Ability1;
+    private readonly InputAction m_PlayerControls_P2_Ability2;
+    private readonly InputAction m_PlayerControls_P2_Swing;
     public struct PlayerControlsActions
     {
         private @Controls m_Wrapper;
         public PlayerControlsActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_PlayerControls_Movement;
-        public InputAction @Dodge => m_Wrapper.m_PlayerControls_Dodge;
-        public InputAction @Swing1 => m_Wrapper.m_PlayerControls_Swing1;
-        public InputAction @Swing2 => m_Wrapper.m_PlayerControls_Swing2;
-        public InputAction @Movement2 => m_Wrapper.m_PlayerControls_Movement2;
-        public InputAction @Dodge2 => m_Wrapper.m_PlayerControls_Dodge2;
+        public InputAction @P1_Movement => m_Wrapper.m_PlayerControls_P1_Movement;
+        public InputAction @P1_Ability1 => m_Wrapper.m_PlayerControls_P1_Ability1;
+        public InputAction @P1_Ability2 => m_Wrapper.m_PlayerControls_P1_Ability2;
+        public InputAction @P1_Swing => m_Wrapper.m_PlayerControls_P1_Swing;
+        public InputAction @P2_Movement => m_Wrapper.m_PlayerControls_P2_Movement;
+        public InputAction @P2_Ability1 => m_Wrapper.m_PlayerControls_P2_Ability1;
+        public InputAction @P2_Ability2 => m_Wrapper.m_PlayerControls_P2_Ability2;
+        public InputAction @P2_Swing => m_Wrapper.m_PlayerControls_P2_Swing;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -346,46 +392,58 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_PlayerControlsActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement;
-                @Dodge.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDodge;
-                @Dodge.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDodge;
-                @Dodge.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDodge;
-                @Swing1.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSwing1;
-                @Swing1.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSwing1;
-                @Swing1.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSwing1;
-                @Swing2.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSwing2;
-                @Swing2.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSwing2;
-                @Swing2.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSwing2;
-                @Movement2.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement2;
-                @Movement2.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement2;
-                @Movement2.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMovement2;
-                @Dodge2.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDodge2;
-                @Dodge2.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDodge2;
-                @Dodge2.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDodge2;
+                @P1_Movement.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Movement;
+                @P1_Movement.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Movement;
+                @P1_Movement.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Movement;
+                @P1_Ability1.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability1;
+                @P1_Ability1.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability1;
+                @P1_Ability1.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability1;
+                @P1_Ability2.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability2;
+                @P1_Ability2.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability2;
+                @P1_Ability2.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability2;
+                @P1_Swing.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Swing;
+                @P1_Swing.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Swing;
+                @P1_Swing.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Swing;
+                @P2_Movement.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Movement;
+                @P2_Movement.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Movement;
+                @P2_Movement.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Movement;
+                @P2_Ability1.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability1;
+                @P2_Ability1.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability1;
+                @P2_Ability1.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability1;
+                @P2_Ability2.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability2;
+                @P2_Ability2.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability2;
+                @P2_Ability2.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability2;
+                @P2_Swing.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Swing;
+                @P2_Swing.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Swing;
+                @P2_Swing.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Swing;
             }
             m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
-                @Dodge.started += instance.OnDodge;
-                @Dodge.performed += instance.OnDodge;
-                @Dodge.canceled += instance.OnDodge;
-                @Swing1.started += instance.OnSwing1;
-                @Swing1.performed += instance.OnSwing1;
-                @Swing1.canceled += instance.OnSwing1;
-                @Swing2.started += instance.OnSwing2;
-                @Swing2.performed += instance.OnSwing2;
-                @Swing2.canceled += instance.OnSwing2;
-                @Movement2.started += instance.OnMovement2;
-                @Movement2.performed += instance.OnMovement2;
-                @Movement2.canceled += instance.OnMovement2;
-                @Dodge2.started += instance.OnDodge2;
-                @Dodge2.performed += instance.OnDodge2;
-                @Dodge2.canceled += instance.OnDodge2;
+                @P1_Movement.started += instance.OnP1_Movement;
+                @P1_Movement.performed += instance.OnP1_Movement;
+                @P1_Movement.canceled += instance.OnP1_Movement;
+                @P1_Ability1.started += instance.OnP1_Ability1;
+                @P1_Ability1.performed += instance.OnP1_Ability1;
+                @P1_Ability1.canceled += instance.OnP1_Ability1;
+                @P1_Ability2.started += instance.OnP1_Ability2;
+                @P1_Ability2.performed += instance.OnP1_Ability2;
+                @P1_Ability2.canceled += instance.OnP1_Ability2;
+                @P1_Swing.started += instance.OnP1_Swing;
+                @P1_Swing.performed += instance.OnP1_Swing;
+                @P1_Swing.canceled += instance.OnP1_Swing;
+                @P2_Movement.started += instance.OnP2_Movement;
+                @P2_Movement.performed += instance.OnP2_Movement;
+                @P2_Movement.canceled += instance.OnP2_Movement;
+                @P2_Ability1.started += instance.OnP2_Ability1;
+                @P2_Ability1.performed += instance.OnP2_Ability1;
+                @P2_Ability1.canceled += instance.OnP2_Ability1;
+                @P2_Ability2.started += instance.OnP2_Ability2;
+                @P2_Ability2.performed += instance.OnP2_Ability2;
+                @P2_Ability2.canceled += instance.OnP2_Ability2;
+                @P2_Swing.started += instance.OnP2_Swing;
+                @P2_Swing.performed += instance.OnP2_Swing;
+                @P2_Swing.canceled += instance.OnP2_Swing;
             }
         }
     }
@@ -401,11 +459,13 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     }
     public interface IPlayerControlsActions
     {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnDodge(InputAction.CallbackContext context);
-        void OnSwing1(InputAction.CallbackContext context);
-        void OnSwing2(InputAction.CallbackContext context);
-        void OnMovement2(InputAction.CallbackContext context);
-        void OnDodge2(InputAction.CallbackContext context);
+        void OnP1_Movement(InputAction.CallbackContext context);
+        void OnP1_Ability1(InputAction.CallbackContext context);
+        void OnP1_Ability2(InputAction.CallbackContext context);
+        void OnP1_Swing(InputAction.CallbackContext context);
+        void OnP2_Movement(InputAction.CallbackContext context);
+        void OnP2_Ability1(InputAction.CallbackContext context);
+        void OnP2_Ability2(InputAction.CallbackContext context);
+        void OnP2_Swing(InputAction.CallbackContext context);
     }
 }

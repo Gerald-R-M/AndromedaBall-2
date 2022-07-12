@@ -37,7 +37,7 @@ public class InputProcessor : MonoBehaviour
     {
         get
         {
-            return controls.PlayerControls.Movement.ReadValue<Vector2>();
+            return controls.PlayerControls.P1_Movement.ReadValue<Vector2>();
         }
     }
 
@@ -45,39 +45,55 @@ public class InputProcessor : MonoBehaviour
     {
         get
         {
-            return controls.PlayerControls.Movement2.ReadValue<Vector2>();
+            return controls.PlayerControls.P2_Movement.ReadValue<Vector2>();
         }
     }
 
     //Process dash input
-    public bool dash
+    public bool p1_ability1
     {
         get
         {
-            return controls.PlayerControls.Dodge.triggered;
+            return controls.PlayerControls.P1_Ability1.triggered;
+        }
+    }
+    
+    public bool p1_ability2
+    {
+        get
+        {
+            return controls.PlayerControls.P1_Ability2.triggered;
         }
     }
 
-    public bool dash2
+    public bool p2_ability1
     {
         get
         {
-            return controls.PlayerControls.Dodge2.triggered;
+            return controls.PlayerControls.P2_Ability1.triggered;
+        }
+    }
+    
+    public bool p2_ability2
+    {
+        get
+        {
+            return controls.PlayerControls.P2_Ability2.triggered;
         }
     }
 
-    public bool swing1
+    public bool p1_swing
     {
         get
         {
-            return controls.PlayerControls.Swing1.triggered;
+            return controls.PlayerControls.P1_Swing.triggered;
         }
     }
-    public bool swing2
+    public bool p2_swing
     {
         get
         {
-            return controls.PlayerControls.Swing2.triggered;
+            return controls.PlayerControls.P2_Swing.triggered;
         }
     }
 }
