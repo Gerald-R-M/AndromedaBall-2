@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: 16331881335859557}
-  - {fileID: 5788418741868501839}
-  - {fileID: 8865394652349648925}
+  - {fileID: 5524076860951246077}
 --- !u!114 &16331881335859557
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -31,19 +30,19 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.93
+    m_Value: 0.6
   intensity:
     m_OverrideState: 1
-    m_Value: 0.82
+    m_Value: 0.34
   scatter:
     m_OverrideState: 1
-    m_Value: 0.199
+    m_Value: 0.313
   clamp:
     m_OverrideState: 1
-    m_Value: 64.25
+    m_Value: 197.3
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.56510323, g: 0.71229386, b: 0.7830189, a: 1}
+    m_Value: {r: 0.5330188, g: 0.5579245, b: 1, a: 1}
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 0
@@ -56,7 +55,7 @@ MonoBehaviour:
   dirtIntensity:
     m_OverrideState: 1
     m_Value: 0
---- !u!114 &5788418741868501839
+--- !u!114 &5524076860951246077
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,32 +64,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
-  m_Name: Tonemapping
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
   active: 1
-  mode:
+  postExposure:
     m_OverrideState: 1
-    m_Value: 2
---- !u!114 &8865394652349648925
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
-  m_Name: LiftGammaGain
-  m_EditorClassIdentifier: 
-  active: 1
-  lift:
-    m_OverrideState: 0
-    m_Value: {x: 0.90846676, y: 1, z: 0.9642586, w: 0.025125626}
-  gamma:
+    m_Value: 0.55
+  contrast:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.8048892, z: 0.86224234, w: 0.09956067}
-  gain:
+    m_Value: 28
+  colorFilter:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.6775828, z: 0.8964143, w: 0.15263766}
+    m_Value: {r: 1.7171938, g: 1.4660947, b: 1.4978782, a: 1}
+  hueShift:
+    m_OverrideState: 1
+    m_Value: 0
+  saturation:
+    m_OverrideState: 1
+    m_Value: -0
