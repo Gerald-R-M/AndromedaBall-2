@@ -176,8 +176,10 @@ GameObject:
   - component: {fileID: 8462540939651781152}
   - component: {fileID: 5105593502065430129}
   - component: {fileID: 3218723716554535596}
+  - component: {fileID: 904741990703410810}
   - component: {fileID: 3990825584379638153}
-  - component: {fileID: 6439753791005417265}
+  - component: {fileID: 1956448802915871289}
+  - component: {fileID: 8190112575105490383}
   m_Layer: 0
   m_Name: Base Player Template
   m_TagString: Player 2
@@ -314,6 +316,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &904741990703410810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218723716554535593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a352bb1130c504c14a049515ab62db7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  controller: {fileID: 0}
+  speed: 0
+  baseSpeed: 5
+  sprintSpeed: 10
+  ability1: {fileID: 0}
+  ability2: {fileID: 0}
+  dir: {x: 0, y: 0, z: 0}
 --- !u!114 &3990825584379638153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 8272262337926465045}
---- !u!114 &6439753791005417265
+--- !u!114 &1956448802915871289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -336,16 +358,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 3218723716554535593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d2c1bb9c25e44437aa5010b15b24109, type: 3}
+  m_Script: {fileID: 11500000, guid: 625bfea394f2d42d8947c517430c4a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xInput: 0
-  yInput: 0
-  ability1: 0
-  ability2: 0
-  swing: 0
-  playerIndex: 1
-  dir: {x: 0, y: 0, z: 0}
+--- !u!114 &8190112575105490383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218723716554535593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea0a5289bf276745aafdab3389a3317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumForce: 0.2
+  resistance: 3
+  falloffRate: 5
 --- !u!1 &3255834327072973857
 GameObject:
   m_ObjectHideFlags: 0

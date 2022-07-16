@@ -7,7 +7,7 @@ public class LiveWire : Ability
 {
     //Inspector Variables
     [SerializeField]private GameObject mine;
-
+    [SerializeField] private float armTime = 0.5f;
     
     //Private Variables
     private LiveWireMine _mineRef;
@@ -19,10 +19,20 @@ public class LiveWire : Ability
 
     private void ActivateLiveWire()
     {
+        Debug.Log("Live Wire Activated!");
         if (!isMineActive)
         {
+            Debug.Log("Mine Placed!");
+
             isMineActive = true;
-            Instantiate(mine, gameObject.transform.position, gameObject.transform.rotation);
+            GameObject placedMine = Instantiate(mine, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+            _mineRef = placedMine.GetComponent<LiveWireMine>();
+        }
+        else
+        {
+            _mineRef.ExplodeMine();
+            isMineActive = false;
+
         }
     }
 }
