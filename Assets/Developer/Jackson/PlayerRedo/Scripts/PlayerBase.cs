@@ -14,6 +14,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
     {
         public int playerIndex;
         [HideInInspector] public CharacterController controller;
+        [HideInInspector] public Animator anim;
         [HideInInspector] public float speed;
 
         private InputProcessor playerInput;
@@ -37,6 +38,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
         {
             controller = this.GetComponent<CharacterController>();
             playerInput = this.GetComponent<InputProcessor>();
+            anim = this.GetComponent<Animator>();
             knockback = this.GetComponent<Knockback>();
             speed = baseSpeed;
         }

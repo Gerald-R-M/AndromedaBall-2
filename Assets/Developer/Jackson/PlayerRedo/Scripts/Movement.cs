@@ -8,6 +8,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
     public class Movement : MonoBehaviour
     {
         private PlayerBase pb;
+        private Animator anim;
 
         // Start is called before the first frame update
         void Start()
@@ -22,6 +23,8 @@ namespace Developer.Jackson.PlayerRedo.Scripts
             {
                 Move();
             }
+            
+            pb.anim.SetFloat("velocity", pb.dir.magnitude);
         }
 
         public void Move()

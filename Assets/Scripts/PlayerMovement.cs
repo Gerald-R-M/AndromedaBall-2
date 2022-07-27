@@ -89,5 +89,6 @@ public class PlayerMovement : MonoBehaviour
 
 
         anim.SetFloat("velocity", controller.velocity.magnitude);
+        Debug.Log("Velocity:" + controller.velocity.magnitude);
     }
 }

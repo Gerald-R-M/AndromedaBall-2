@@ -10,11 +10,12 @@ public class BallBounce : MonoBehaviour
 
     private Vector3 lastFrameVelocity;
     private Rigidbody rb;
+    private HitsparkController hitspark;
 
     private void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
-        
+        hitspark = GetComponent<HitsparkController>();
     }
     
     void Update()
@@ -32,5 +33,6 @@ public class BallBounce : MonoBehaviour
         var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
         rb.velocity = direction * Mathf.Clamp(speed, minVelocity, maxVelocity);
+        hitspark.Play(collisionNormal);
     }
 }
