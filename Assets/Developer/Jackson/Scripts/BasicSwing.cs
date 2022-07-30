@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Developer.Jackson.PlayerRedo.Scripts;
 using UnityEngine;
 
 public class BasicSwing : MonoBehaviour
@@ -10,11 +11,13 @@ public class BasicSwing : MonoBehaviour
 
     private InputProcessor input;
     private Animator anim;
+    private PlayerBase pb;
     
     // Start is called before the first frame update
     void Start()
     {
         input = GetComponent<InputProcessor>();
+        pb = GetComponent<PlayerBase>();
         anim = GetComponent<Animator>();
         hitbox.gameObject.SetActive(false);
     }
@@ -24,9 +27,23 @@ public class BasicSwing : MonoBehaviour
     {
         if (this.tag == "Player 1")
         {
-            if (input.p1_swing)
+            if (input.p1_swing_press)
             {
-                anim.SetTrigger("hit");
+                //Actions for pressing down the swing button
+                if (pb.GetState() == 0 || pb.GetState() == 1)
+                {
+                    SetSwingState(1);
+                    pb.SetState(2);
+                }
+            }
+
+            if (input.p1_swing_release)
+            {
+                if (pb.GetState() == 2)
+                {
+                    SetSwingState(2);
+                    pb.SetState(3);
+                }
             }
         }
 
@@ -48,6 +65,11 @@ public class BasicSwing : MonoBehaviour
     void DisableHitbox()
     {
         hitbox.gameObject.SetActive(false);
+    }
+
+    void SetSwingState(int newState)
+    {
+        anim.SetInteger("swingState", newState);
     }
 
 }

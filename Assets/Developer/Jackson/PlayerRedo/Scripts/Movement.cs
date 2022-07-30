@@ -35,6 +35,11 @@ namespace Developer.Jackson.PlayerRedo.Scripts
             float targetAngle = Mathf.Atan2(dirRotation.x, pb.dir.z) * Mathf.Rad2Deg;
 
             pb.controller.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+            
+            if (pb.GetState() != 1)
+            {
+                pb.SetState(1);
+            }
         }
     }
 }

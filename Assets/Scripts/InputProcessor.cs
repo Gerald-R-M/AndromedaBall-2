@@ -89,6 +89,24 @@ public class InputProcessor : MonoBehaviour
             return controls.PlayerControls.P1_Swing.triggered;
         }
     }
+
+    public bool p1_swing_press
+    {
+        get
+        {
+            return controls.PlayerControls.P1_Swing.WasPressedThisFrame();
+        }
+    }
+    
+    public bool p1_swing_release 
+    {
+        get
+        {
+            return controls.PlayerControls.P1_Swing.WasReleasedThisFrame();
+        }
+    }
+    
+    
     public bool p2_swing
     {
         get
