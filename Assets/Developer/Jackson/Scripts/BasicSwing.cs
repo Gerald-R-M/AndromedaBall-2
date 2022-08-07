@@ -30,18 +30,23 @@ public class BasicSwing : MonoBehaviour
             if (input.p1_swing_press)
             {
                 //Actions for pressing down the swing button
+                
+                //If state is idle or basic movement
                 if (pb.GetState() == 0 || pb.GetState() == 1)
                 {
-                    SetSwingState(1);
+                    //Change state to charging
+                    SetAnimState(2);
                     pb.SetState(2);
                 }
             }
 
             if (input.p1_swing_release)
             {
+                //If we're charging
                 if (pb.GetState() == 2)
                 {
-                    SetSwingState(2);
+                    //Change state to swinging
+                    SetAnimState(3);
                     pb.SetState(3);
                 }
             }
@@ -67,9 +72,9 @@ public class BasicSwing : MonoBehaviour
         hitbox.gameObject.SetActive(false);
     }
 
-    void SetSwingState(int newState)
+    void SetAnimState(int newState)
     {
-        anim.SetInteger("swingState", newState);
+        anim.SetInteger("playerState", newState);
     }
 
 }

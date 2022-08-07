@@ -29,17 +29,23 @@ namespace Developer.Jackson.PlayerRedo.Scripts
 
         public void Move()
         {
-            pb.controller.Move
-                (pb.dir.normalized * pb.speed * Time.deltaTime);
+            if (pb.GetState() < 2)
+            {
+                if (pb.GetState() != 1)
+                {
+                    pb.SetState(1);
+                }
+
+                pb.controller.Move
+                    (pb.dir.normalized * pb.speed * Time.deltaTime);
+            }
+
             Vector3 dirRotation = pb.dir.normalized;
             float targetAngle = Mathf.Atan2(dirRotation.x, pb.dir.z) * Mathf.Rad2Deg;
 
             pb.controller.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
             
-            if (pb.GetState() != 1)
-            {
-                pb.SetState(1);
-            }
+            
         }
     }
 }

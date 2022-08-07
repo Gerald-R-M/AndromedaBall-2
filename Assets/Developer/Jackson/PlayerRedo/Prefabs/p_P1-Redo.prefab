@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 789871782901828194}
   - component: {fileID: 789871782901828204}
   - component: {fileID: 789871782901828207}
+  - component: {fileID: 3728869654405631196}
   m_Layer: 0
   m_Name: p_P1-Redo
   m_TagString: Player 1
@@ -130,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 1
   controller: {fileID: 0}
+  anim: {fileID: 0}
   speed: 0
   baseSpeed: 5.75
   sprintSpeed: 11.84
@@ -165,6 +167,22 @@ MonoBehaviour:
   minimumForce: 0.2
   resistance: 3
   falloffRate: 5
+--- !u!114 &3728869654405631196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789871782901828195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7d8e822444d4448a5df66be1f27484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneScore: 0
+  twoScore: 0
+  deathSound: {fileID: 8300000, guid: 2d8ec86176287464b97aaf52182bc8f3, type: 3}
+  pointSound: {fileID: 8300000, guid: 57ee14e049b53c2469a17e4624031771, type: 3}
 --- !u!1 &824730526007516395
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +358,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535265866035212503}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
