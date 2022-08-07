@@ -14,6 +14,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
     {
         public int playerIndex;
         [HideInInspector] public CharacterController controller;
+        [HideInInspector] public Animator anim;
         [HideInInspector] public float speed;
 
         private InputProcessor playerInput;
@@ -21,6 +22,8 @@ namespace Developer.Jackson.PlayerRedo.Scripts
 
         private float xInput, yInput;
         private bool abil1, abil2, swing;
+        //States: 0 = Idle, 1 = Moving, 2 = Charge, 3 = Swing, 4 = Knockback, will add more 
+        private int state = 0;
 
         public float baseSpeed;
         public float sprintSpeed;
@@ -37,8 +40,10 @@ namespace Developer.Jackson.PlayerRedo.Scripts
         {
             controller = this.GetComponent<CharacterController>();
             playerInput = this.GetComponent<InputProcessor>();
+            anim = this.GetComponent<Animator>();
             knockback = this.GetComponent<Knockback>();
             speed = baseSpeed;
+            state = 0;
         }
 
         // Update is called once per frame
@@ -91,6 +96,16 @@ namespace Developer.Jackson.PlayerRedo.Scripts
                 Vector3 impactVectorFixed = new Vector3(impactVector.x * -1, 0, impactVector.z * -1);
                 knockback.AddImpact(impactVectorFixed, impactVector.magnitude);
             }
+        }
+
+        public void SetState(int newState)
+        {
+            state = newState;
+        }
+
+        public int GetState()
+        {
+            return state;
         }
     }
 }

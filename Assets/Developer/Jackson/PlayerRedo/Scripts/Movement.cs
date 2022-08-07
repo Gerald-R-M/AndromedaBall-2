@@ -8,6 +8,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
     public class Movement : MonoBehaviour
     {
         private PlayerBase pb;
+        private Animator anim;
 
         // Start is called before the first frame update
         void Start()
@@ -22,16 +23,29 @@ namespace Developer.Jackson.PlayerRedo.Scripts
             {
                 Move();
             }
+            
+            pb.anim.SetFloat("velocity", pb.dir.magnitude);
         }
 
         public void Move()
         {
-            pb.controller.Move
-                (pb.dir.normalized * pb.speed * Time.deltaTime);
+            if (pb.GetState() < 2)
+            {
+                if (pb.GetState() != 1)
+                {
+                    pb.SetState(1);
+                }
+
+                pb.controller.Move
+                    (pb.dir.normalized * pb.speed * Time.deltaTime);
+            }
+
             Vector3 dirRotation = pb.dir.normalized;
             float targetAngle = Mathf.Atan2(dirRotation.x, pb.dir.z) * Mathf.Rad2Deg;
 
             pb.controller.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+            
+            
         }
     }
 }
