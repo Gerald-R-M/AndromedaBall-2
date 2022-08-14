@@ -25,8 +25,11 @@ public class BasicSwing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /* Swing being phased out
+         
         if (this.tag == "Player 1")
         {
+            
             if (input.p1_swing_press)
             {
                 //Actions for pressing down the swing button
@@ -50,7 +53,7 @@ public class BasicSwing : MonoBehaviour
                     pb.SetState(3);
                 }
             }
-        }
+        } 
 
         if (this.tag == "Player 2")
         {
@@ -59,6 +62,7 @@ public class BasicSwing : MonoBehaviour
                 anim.SetTrigger("hit");
             }
         }
+        */
 
     }
     

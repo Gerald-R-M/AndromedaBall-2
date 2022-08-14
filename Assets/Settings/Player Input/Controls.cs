@@ -55,7 +55,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""P1_Swing"",
+                    ""name"": ""P1_Dash"",
                     ""type"": ""Button"",
                     ""id"": ""8089b634-4f82-4665-b77f-89c1b4089f46"",
                     ""expectedControlType"": ""Button"",
@@ -91,7 +91,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""P2_Swing"",
+                    ""name"": ""P2_Dash"",
                     ""type"": ""Button"",
                     ""id"": ""1f1d1283-d702-4cf4-b573-5f4c6af05b48"",
                     ""expectedControlType"": ""Button"",
@@ -174,7 +174,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""P1_Swing"",
+                    ""action"": ""P1_Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -185,7 +185,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""P2_Swing"",
+                    ""action"": ""P2_Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -299,11 +299,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_PlayerControls_P1_Movement = m_PlayerControls.FindAction("P1_Movement", throwIfNotFound: true);
         m_PlayerControls_P1_Ability1 = m_PlayerControls.FindAction("P1_Ability1", throwIfNotFound: true);
         m_PlayerControls_P1_Ability2 = m_PlayerControls.FindAction("P1_Ability2", throwIfNotFound: true);
-        m_PlayerControls_P1_Swing = m_PlayerControls.FindAction("P1_Swing", throwIfNotFound: true);
+        m_PlayerControls_P1_Dash = m_PlayerControls.FindAction("P1_Dash", throwIfNotFound: true);
         m_PlayerControls_P2_Movement = m_PlayerControls.FindAction("P2_Movement", throwIfNotFound: true);
         m_PlayerControls_P2_Ability1 = m_PlayerControls.FindAction("P2_Ability1", throwIfNotFound: true);
         m_PlayerControls_P2_Ability2 = m_PlayerControls.FindAction("P2_Ability2", throwIfNotFound: true);
-        m_PlayerControls_P2_Swing = m_PlayerControls.FindAction("P2_Swing", throwIfNotFound: true);
+        m_PlayerControls_P2_Dash = m_PlayerControls.FindAction("P2_Dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -366,11 +366,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControls_P1_Movement;
     private readonly InputAction m_PlayerControls_P1_Ability1;
     private readonly InputAction m_PlayerControls_P1_Ability2;
-    private readonly InputAction m_PlayerControls_P1_Swing;
+    private readonly InputAction m_PlayerControls_P1_Dash;
     private readonly InputAction m_PlayerControls_P2_Movement;
     private readonly InputAction m_PlayerControls_P2_Ability1;
     private readonly InputAction m_PlayerControls_P2_Ability2;
-    private readonly InputAction m_PlayerControls_P2_Swing;
+    private readonly InputAction m_PlayerControls_P2_Dash;
     public struct PlayerControlsActions
     {
         private @Controls m_Wrapper;
@@ -378,11 +378,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @P1_Movement => m_Wrapper.m_PlayerControls_P1_Movement;
         public InputAction @P1_Ability1 => m_Wrapper.m_PlayerControls_P1_Ability1;
         public InputAction @P1_Ability2 => m_Wrapper.m_PlayerControls_P1_Ability2;
-        public InputAction @P1_Swing => m_Wrapper.m_PlayerControls_P1_Swing;
+        public InputAction @P1_Dash => m_Wrapper.m_PlayerControls_P1_Dash;
         public InputAction @P2_Movement => m_Wrapper.m_PlayerControls_P2_Movement;
         public InputAction @P2_Ability1 => m_Wrapper.m_PlayerControls_P2_Ability1;
         public InputAction @P2_Ability2 => m_Wrapper.m_PlayerControls_P2_Ability2;
-        public InputAction @P2_Swing => m_Wrapper.m_PlayerControls_P2_Swing;
+        public InputAction @P2_Dash => m_Wrapper.m_PlayerControls_P2_Dash;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -401,9 +401,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @P1_Ability2.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability2;
                 @P1_Ability2.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability2;
                 @P1_Ability2.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Ability2;
-                @P1_Swing.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Swing;
-                @P1_Swing.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Swing;
-                @P1_Swing.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Swing;
+                @P1_Dash.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Dash;
+                @P1_Dash.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Dash;
+                @P1_Dash.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP1_Dash;
                 @P2_Movement.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Movement;
                 @P2_Movement.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Movement;
                 @P2_Movement.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Movement;
@@ -413,9 +413,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @P2_Ability2.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability2;
                 @P2_Ability2.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability2;
                 @P2_Ability2.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Ability2;
-                @P2_Swing.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Swing;
-                @P2_Swing.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Swing;
-                @P2_Swing.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Swing;
+                @P2_Dash.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Dash;
+                @P2_Dash.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Dash;
+                @P2_Dash.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnP2_Dash;
             }
             m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -429,9 +429,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @P1_Ability2.started += instance.OnP1_Ability2;
                 @P1_Ability2.performed += instance.OnP1_Ability2;
                 @P1_Ability2.canceled += instance.OnP1_Ability2;
-                @P1_Swing.started += instance.OnP1_Swing;
-                @P1_Swing.performed += instance.OnP1_Swing;
-                @P1_Swing.canceled += instance.OnP1_Swing;
+                @P1_Dash.started += instance.OnP1_Dash;
+                @P1_Dash.performed += instance.OnP1_Dash;
+                @P1_Dash.canceled += instance.OnP1_Dash;
                 @P2_Movement.started += instance.OnP2_Movement;
                 @P2_Movement.performed += instance.OnP2_Movement;
                 @P2_Movement.canceled += instance.OnP2_Movement;
@@ -441,9 +441,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @P2_Ability2.started += instance.OnP2_Ability2;
                 @P2_Ability2.performed += instance.OnP2_Ability2;
                 @P2_Ability2.canceled += instance.OnP2_Ability2;
-                @P2_Swing.started += instance.OnP2_Swing;
-                @P2_Swing.performed += instance.OnP2_Swing;
-                @P2_Swing.canceled += instance.OnP2_Swing;
+                @P2_Dash.started += instance.OnP2_Dash;
+                @P2_Dash.performed += instance.OnP2_Dash;
+                @P2_Dash.canceled += instance.OnP2_Dash;
             }
         }
     }
@@ -462,10 +462,10 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnP1_Movement(InputAction.CallbackContext context);
         void OnP1_Ability1(InputAction.CallbackContext context);
         void OnP1_Ability2(InputAction.CallbackContext context);
-        void OnP1_Swing(InputAction.CallbackContext context);
+        void OnP1_Dash(InputAction.CallbackContext context);
         void OnP2_Movement(InputAction.CallbackContext context);
         void OnP2_Ability1(InputAction.CallbackContext context);
         void OnP2_Ability2(InputAction.CallbackContext context);
-        void OnP2_Swing(InputAction.CallbackContext context);
+        void OnP2_Dash(InputAction.CallbackContext context);
     }
 }

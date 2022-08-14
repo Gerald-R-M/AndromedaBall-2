@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class FazeShot : Ability
 {
-    private PlayerMovement _movementRef;
+    private Movement _movementRef;
     private bool IsFazeActive = false;
     private bool isColliding = false;
     private float _activeCounter;

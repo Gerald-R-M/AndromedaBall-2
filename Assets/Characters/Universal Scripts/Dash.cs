@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using Developer.Jackson.PlayerRedo.Scripts;
 using UnityEngine;
 
-public class Dash : Ability
+public class Dash : MonoBehaviour
 {
+    [SerializeField] private BoxCollider hitbox;
+    
     public float dashSpeed = 15f;
     public float dashTime = 0.1f;
 
-    public override void Activate()
+    public float force = 15f;
+
+    private PlayerBase playerBase;
+    private CharacterController characterController;
+    private Animator anim;
+
+    private void Start()
     {
-        StartCoroutine(DashFunction());
+        playerBase = this.GetComponent<PlayerBase>();
+        characterController = this.GetComponent<CharacterController>();
+        hitbox.gameObject.SetActive(false);
     }
 
     public IEnumerator DashFunction()

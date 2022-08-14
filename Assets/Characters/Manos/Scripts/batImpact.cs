@@ -22,7 +22,7 @@ public class batImpact : MonoBehaviour
         if (other.gameObject.CompareTag("Ball"))
         {
             //Debug.Log("Ball and Bat without swing");
-            if (playerInput.p1_swing || playerInput.p2_swing)
+            if (playerInput.p1_dash || playerInput.p2_dash)
             {
                 if(other.GetComponent<Rigidbody>().velocity.magnitude < 2f)
                 {
