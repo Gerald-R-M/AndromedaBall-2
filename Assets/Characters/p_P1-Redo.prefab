@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba60ae333d82e4999be0f460db89888b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitbox: {fileID: 0}
+  hitbox: {fileID: 4525070734490093233}
   dashSpeed: 41
   dashTime: 0.355
   force: 15
@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 4526893158844600555}
   - component: {fileID: 2684497702469718075}
   - component: {fileID: 6665309392761601976}
+  - component: {fileID: 4462799789736816535}
   - component: {fileID: 4525070734490093233}
   m_Layer: 0
   m_Name: Hitbox
@@ -365,6 +366,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4462799789736816535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989008799142523767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a91c1cb68e74249b826de34eca7395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &4525070734490093233
 BoxCollider:
   m_ObjectHideFlags: 0

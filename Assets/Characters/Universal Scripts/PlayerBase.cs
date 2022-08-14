@@ -22,7 +22,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
 
         private float xInput, yInput;
         private bool abil1, abil2, dash;
-        //States: 0 = Idle, 1 = Moving, 2 = Charge, 3 = Swing, 4 = Knockback, will add more 
+        //States: 0 = Idle, 1 = Moving, 2 = Dash, 3 = Knockback, will add more 
         private int state = 0;
 
         public float baseSpeed;
@@ -77,7 +77,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
                 Debug.Log("Ability 2 Acitvated");
                 ability2.Activate();
             }
-
+            
             
             dir = new Vector3(xInput, 0, yInput).normalized;
 
@@ -106,6 +106,11 @@ namespace Developer.Jackson.PlayerRedo.Scripts
         public int GetState()
         {
             return state;
+        }
+
+        public bool GetDash()
+        {
+            return dash;
         }
     }
 }
