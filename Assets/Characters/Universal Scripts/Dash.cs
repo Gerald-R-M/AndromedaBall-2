@@ -7,8 +7,12 @@ using UnityEngine;
 public class Dash : MonoBehaviour
 {
     [SerializeField] private BoxCollider hitbox;
+    [SerializeField] private AnimationCurve lerpCurve;
     
-    public float dashSpeed = 15f;
+    
+    private float dashSpeed, dashSpeedLastFrame;
+    private bool pastPeakSpeed;
+    public float dashPeakSpeed = 15f;
     public float dashTime = 0.1f;
 
     public float force = 15f;
@@ -42,12 +46,24 @@ public class Dash : MonoBehaviour
     {
         float startTime = Time.time;
         Vector3 dashDir = new Vector3(playerBase.dir.x, 0, playerBase.dir.z).normalized;
+        pastPeakSpeed = false;
         Debug.Log("dashDir: " + dashDir.ToString()); 
         SetAnimState(2);
 
         while (Time.time < startTime + dashTime)
         {
+            dashSpeed = (dashPeakSpeed * (lerpCurve.Evaluate(Time.time - startTime)));
+            if ((dashSpeed < dashSpeedLastFrame) && pastPeakSpeed == false)
+            {
+                dashDir = new Vector3(playerBase.dir.x, 0, playerBase.dir.z).normalized;
+                if (dashSpeed < dashSpeedLastFrame)
+                {
+                    pastPeakSpeed = true;
+                }
+            }
+            Debug.Log("DashSpeed: " + dashSpeed);
             characterController.Move(dashDir.normalized * dashSpeed * Time.deltaTime);
+            dashSpeedLastFrame = dashSpeed;
             yield return null;
         }
         playerBase.ReturnToBaseSpeed();
