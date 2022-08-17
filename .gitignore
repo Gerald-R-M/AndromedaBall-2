@@ -74,3 +74,6 @@ crashlytics-build.properties
 .DS_Store
 *.xml
 .DS_Store
+
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/EditorBuildSettings.asset
