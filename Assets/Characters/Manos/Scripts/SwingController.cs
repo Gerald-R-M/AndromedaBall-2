@@ -25,6 +25,7 @@ public class SwingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /* Swing being phased out
         if (this.tag == "Player 1")
         {
             if (input.p1_swing)
@@ -40,6 +41,7 @@ public class SwingController : MonoBehaviour
                 anim.SetTrigger("hit");
             }
         }
+        */
     }
 
     void EnableHitbox()

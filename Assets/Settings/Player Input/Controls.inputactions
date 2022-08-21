@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "P1_Swing",
+                    "name": "P1_Dash",
                     "type": "Button",
                     "id": "8089b634-4f82-4665-b77f-89c1b4089f46",
                     "expectedControlType": "Button",
@@ -69,7 +69,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "P2_Swing",
+                    "name": "P2_Dash",
                     "type": "Button",
                     "id": "1f1d1283-d702-4cf4-b573-5f4c6af05b48",
                     "expectedControlType": "Button",
@@ -152,7 +152,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "P1_Swing",
+                    "action": "P1_Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -163,7 +163,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "P2_Swing",
+                    "action": "P2_Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

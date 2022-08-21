@@ -82,36 +82,19 @@ public class InputProcessor : MonoBehaviour
         }
     }
 
-    public bool p1_swing
+    public bool p1_dash
     {
         get
         {
-            return controls.PlayerControls.P1_Swing.triggered;
+            return controls.PlayerControls.P1_Dash.triggered;
         }
     }
 
-    public bool p1_swing_press
+    public bool p2_dash
     {
         get
         {
-            return controls.PlayerControls.P1_Swing.WasPressedThisFrame();
-        }
-    }
-    
-    public bool p1_swing_release 
-    {
-        get
-        {
-            return controls.PlayerControls.P1_Swing.WasReleasedThisFrame();
-        }
-    }
-    
-    
-    public bool p2_swing
-    {
-        get
-        {
-            return controls.PlayerControls.P2_Swing.triggered;
+            return controls.PlayerControls.P2_Dash.triggered;
         }
     }
 }

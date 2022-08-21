@@ -7,18 +7,18 @@ using UnityEngine.InputSystem.Controls;
 public class InputProcessor_P1 : MonoBehaviour
 {
     private Controls controls;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
-    
+
     void Awake()
     {
         controls = new Controls();
     }
-    
+
     private void OnEnable()
     {
         controls.Enable();
@@ -31,25 +31,11 @@ public class InputProcessor_P1 : MonoBehaviour
 
     public Vector2 input
     {
-        get
-        {
-            return controls.PlayerControls.P1_Movement.ReadValue<Vector2>();
-        }
+        get { return controls.PlayerControls.P1_Movement.ReadValue<Vector2>(); }
     }
-    
+
     public bool dash
     {
-        get
-        {
-            return controls.PlayerControls.P1_Ability1.triggered;
-        }
-    }
-    
-    public bool swing1
-    {
-        get
-        {
-            return controls.PlayerControls.P1_Swing.triggered;
-        }
+        get { return controls.PlayerControls.P1_Ability1.triggered; }
     }
 }

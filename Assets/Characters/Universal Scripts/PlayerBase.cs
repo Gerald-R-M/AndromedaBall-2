@@ -21,8 +21,8 @@ namespace Developer.Jackson.PlayerRedo.Scripts
         private Knockback knockback;
 
         private float xInput, yInput;
-        private bool abil1, abil2, swing;
-        //States: 0 = Idle, 1 = Moving, 2 = Charge, 3 = Swing, 4 = Knockback, will add more 
+        private bool abil1, abil2, dash;
+        //States: 0 = Idle, 1 = Moving, 2 = Dash, 3 = Knockback, will add more 
         private int state = 0;
 
         public float baseSpeed;
@@ -55,7 +55,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
                 yInput = playerInput.input.y;
                 abil1 = playerInput.p1_ability1;
                 abil2 = playerInput.p1_ability2;
-                swing = playerInput.p1_swing;
+                dash = playerInput.p1_dash;
             }
 
             else if (playerIndex == 2)
@@ -64,7 +64,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
                 yInput = playerInput.input2.y;
                 abil1 = playerInput.p2_ability1;
                 abil2 = playerInput.p2_ability2;
-                swing = playerInput.p2_swing;
+                dash = playerInput.p2_dash;
             }
 
             if (abil1)
@@ -77,7 +77,7 @@ namespace Developer.Jackson.PlayerRedo.Scripts
                 Debug.Log("Ability 2 Acitvated");
                 ability2.Activate();
             }
-
+            
             
             dir = new Vector3(xInput, 0, yInput).normalized;
 
@@ -106,6 +106,11 @@ namespace Developer.Jackson.PlayerRedo.Scripts
         public int GetState()
         {
             return state;
+        }
+
+        public bool GetDash()
+        {
+            return dash;
         }
     }
 }
