@@ -16,12 +16,15 @@ public class DashHitbox : MonoBehaviour
     private Dash dashData;
     //Holds velocity of ball when they collide
     private float velRef;
+
+    private ballSpeedManager _ballSpeedRef;
     
     void Start()
     {
         //Attach to refs
         collider = GetComponent<BoxCollider>();
         dashData = collider.transform.root.GetComponent<Dash>();
+        _ballSpeedRef = FindObjectOfType<ballSpeedManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,10 +37,10 @@ public class DashHitbox : MonoBehaviour
             //Set the direction we're gonna send the ball in to the Player's current facing direction
             //Multiply the direction vector to the "force" value in the Player's "Dash" variable
             Vector3 newDirection = (transform.root.GetComponent<PlayerBase>().dir) * (dashData.force);
-            Vector3 currentVelocity = other.gameObject.GetComponent<Rigidbody>().velocity;
-
+            
             //Add the force of "newDirection" to the ball
-            other.GetComponent<Rigidbody>().AddForce(newDirection, ForceMode.VelocityChange);
+            //other.GetComponent<Rigidbody>().AddForce(newDirection, ForceMode.VelocityChange);
+            _ballSpeedRef.CalculateVelocity(newDirection, dashData.force);
         }
     }
 }
