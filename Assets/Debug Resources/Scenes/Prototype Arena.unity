@@ -16326,6 +16326,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4996586230234842209, guid: 1dca28c0559a13e4ea1560e899bcfca3, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8284559673991793602, guid: 1dca28c0559a13e4ea1560e899bcfca3, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -16393,5 +16397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d9aef18bddbf74fb518867d6b10118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentVelocity: {x: 0, y: 0, z: 0}
-  accelerationTime: 500
+  currentVelocity: 0
+  accelerationTime: 180
+  sustainPercent: 80
